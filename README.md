@@ -31,3 +31,4 @@ To get started with **Event Spark**, follow these steps:
 
    ```bash
    git clone https://github.com/yourusername/event-spark.git
+cls
