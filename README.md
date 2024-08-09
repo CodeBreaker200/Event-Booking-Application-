@@ -1,27 +1,33 @@
-# EventManagement
+# Event Spark
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+Welcome to **Event Spark**! This Angular-based application enables users to register, log in, and book events in their relevant city. 
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **User Registration and Login**: Secure user authentication system.
+- **Event Booking**: Browse and book events based on your city.
+- **Responsive Design**: Optimized for all devices.
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. [Technologies Used](#technologies-used)
+2. [Setup and Installation](#setup-and-installation)
+3. [Usage](#usage)
+4. [Folder Structure](#folder-structure)
+5. [Contributing](#contributing)
+6. [License](#license)
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Frontend**: Angular, Bootstrap
+- **Backend**: [Your backend technology, e.g., ASP.NET Core]
+- **Database**: [Your database technology, e.g., SQL Server]
 
-## Running unit tests
+## Setup and Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To get started with **Event Spark**, follow these steps:
 
-## Running end-to-end tests
+1. **Clone the Repository**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+   ```bash
+   git clone https://github.com/yourusername/event-spark.git

@@ -1,0 +1,36 @@
+<div class="container my-5">
+  <!-- Heading and Tagline -->
+  <div class="heading-container text-center mb-5">
+    <h1 class="display-4 custom-heading">My Bookings</h1>
+    <p class="lead custom-tagline">Here are all your event bookings</p>
+  </div>
+
+  <!-- Table of Bookings -->
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Event Name</th>
+          <th>Booking No</th>
+          <th>Start Date</th>
+          <th>Start Time</th>
+          <th>End Date</th>
+          <th>Organizer</th>
+          <th>No of Tickets</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Angular ngFor loop to iterate over bookingList -->
+        <tr *ngFor="let item of bookingList; let i = index">
+          <td>{{ item.eventName }}</td>
+          <td>{{ item.bookingNo }}</td>
+          <td>{{ item.startDate | date }}</td>
+          <td>{{ item.startTime }}</td>
+          <td>{{ item.endDate | date }}</td>
+          <td>{{ item.organizerName }}</td>
+          <td>{{ item.noOfTickets }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

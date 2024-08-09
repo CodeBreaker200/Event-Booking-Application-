@@ -1,0 +1,52 @@
+
+.heading-container {
+  margin-bottom: 2rem;
+}
+
+.custom-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333; /* Custom color */
+}
+
+.custom-tagline {
+  font-size: 1.25rem;
+  color: #666; /* Custom color */
+}
+/* Responsive Table Styling */
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* Custom Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  text-align: center;
+  padding: 12px; /* Adjust padding as needed */
+}
+
+.table th {
+  background-color: #343a40;
+  color: white;
+  font-weight: bold;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Hover effect */
+.table-hover tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .table th, .table td {
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+}

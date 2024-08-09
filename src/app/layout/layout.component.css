@@ -1,0 +1,66 @@
+/* Custom styles for the navbar */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.form-inline .form-control {
+  border-radius: 30px;
+  padding: 0.25rem 1rem;
+  width: 60%; /* Adjust width as needed */
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%2872, 72, 72, 0.7%29" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M4 8h24M4 16h24M4 24h24"/%3E%3C/svg%3E');
+}
+
+.navbar-toggler-icon:hover {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%2872, 72, 72, 0.9%29" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M4 8h24M4 16h24M4 24h24"/%3E%3C/svg%3E');
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .form-inline {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .form-inline .form-control {
+    width: 60%;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem; /* Reduce font size as needed */
+  }
+}
+
+@media (max-width: 767.98px) {
+  .form-inline {
+    text-align: center;
+  }
+  .form-inline .form-control {
+    width: 80%;
+    font-size: 0.8rem; /* Further reduce font size for smaller screens */
+  }
+}

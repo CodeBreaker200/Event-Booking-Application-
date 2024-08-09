@@ -1,0 +1,208 @@
+.event-container {
+  padding: 0 15px;
+}
+
+.event-container .heading-container {
+  margin-bottom: 2rem;
+}
+
+.event-container .heading-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.event-container .heading-container p {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.event-container .banner-container {
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Set a fixed height for the banner */
+}
+
+.event-container .banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-container .details-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.event-container .details-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.event-container .details-container p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-container .other-events h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.event-container .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.event-container .card:hover {
+  transform: translateY(-10px);
+}
+
+.event-container .card-img-top {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9; /* Adjust aspect ratio as needed */
+  object-fit: cover;
+}
+
+.event-container .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-container .btn {
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .event-container .heading-container h1 {
+    font-size: 2rem;
+  }
+
+  .event-container .heading-container p {
+    font-size: 1rem;
+  }
+
+  .event-container .details-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .event-container .details-container p {
+    font-size: 1rem;
+  }
+
+  .event-container .other-events h3 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* User Information Modal CSS */
+
+.custom-modal-header {
+  background-color: #007bff; /* Example color, adjust as needed */
+  color: #fff; /* Text color */
+  text-align: center; /* Center align text */
+  border-bottom: none; /* Remove default bottom border if needed */
+}
+
+.custom-modal-header .modal-title {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  
+}
+
+.user-info-container {
+  max-width: 800px;
+}
+
+.user-info-container .modal-content {
+  padding: 20px;
+}
+
+.user-info-container .form-group {
+  margin-bottom: 15px;
+}
+
+.user-info-container .table-responsive {
+  margin-top: 20px;
+}
+
+.user-info-container .table {
+  background-color: #f8f9fa;
+}
+
+.user-info-container .table th, .user-info-container .table td {
+  vertical-align: middle;
+}
+
+.user-info-container thead.thead-dark th {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.user-info-container .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.user-info-container .form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-info-container .form-group.col-md-6,
+.user-info-container .form-group.col-md-4 {
+  flex: 0 0 calc(50% - 10px);
+}
+
+.user-info-container .form-group.col-md-4 {
+  flex: 0 0 calc(33.333% - 10px);
+}
+
+/* Custom styles for modal header and footer */
+.user-info-container .modal-header {
+  background-color: #007bff;
+  color: white;
+}
+
+.user-info-container .modal-footer {
+  display: flex;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+.user-info-container .modal-footer .table {
+  margin: 0;
+}
+
+.user-info-container .modal-body {
+  padding-bottom: 0;
+}
+
+.user-info-container .btn-primary {
+  margin-top: 5px;
+}
+
+/* Custom table styles */
+.user-info-container .table th, .user-info-container .table td {
+  text-align: center;
+  padding: 10px;
+}
+
+.user-info-container .table th {
+  background-color: #6c757d;
+  color: white;
+}
+
+.user-info-container .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}

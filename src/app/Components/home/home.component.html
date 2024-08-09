@@ -1,0 +1,18 @@
+<div class="container  my-5">
+    <div class="text-center mb-4">
+      <h1>Upcoming Events</h1>
+      <p class="lead">Don't miss out on our exciting events. Book your spot now!</p>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4" *ngFor="let item of eventObj">
+        <div class="card h-100">
+          <img [src]="item.imageUrl" class="card-img-top" alt="Card image">
+          <div class="card-body">
+            <p class="card-text">{{item.eventName}}</p>
+            <button class="btn btn-primary" [routerLink]="['/event', item.eventId]">Book</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

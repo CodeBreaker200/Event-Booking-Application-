@@ -1,0 +1,121 @@
+<div class="event-container container my-5" *ngIf="eventData$ | async as eventData">
+  <!-- Heading and Tagline -->
+  <div class="heading-container text-center mb-5">
+    <h1 class="display-4">Exciting Event</h1>
+    <p class="lead">Join us for an unforgettable experience</p>
+  </div>
+
+  <!-- Event Details Section -->
+  <div class="event-details mb-5">
+    <div class="banner-container mb-4">
+      <img [src]="eventData.imageUrl" class="img-fluid rounded banner-img" alt="Event Image">
+    </div>
+    <div class="details-container p-3 shadow rounded">
+      <h2>{{ eventData.eventName }}</h2>
+      <p><strong>Start Date:</strong> {{ eventData.startDate | date }}</p>
+      <p><strong>Start Time:</strong> {{ eventData.startTime }}</p>
+      <p><strong>Organizer:</strong> {{ eventData.organizerName }}</p>
+      <p><strong>Price:</strong> ${{ eventData.price }}</p>
+      <p><strong>Location:</strong> {{ eventData.location }}</p>
+      <p><strong>End Date:</strong> {{ eventData.endDate | date }}</p>
+      <button class="btn btn-primary" [disabled]="!userObj" (click)="onShow()">Book Now</button>
+    </div>
+  </div>
+
+  <!-- Other Events by the Same Organization Section -->
+  <div class="other-events">
+    <h3 class="text-center mb-4">Other Events by {{ eventData.organizerId }}</h3>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4" *ngFor="let item of events$ | async">
+        <div class="card h-100">
+          <img [src]="item.imageUrl" class="card-img-top" alt="Card image">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.eventName }}</h5>
+            <p class="card-text">{{ item.location }}</p>
+            <button class="btn btn-primary" [routerLink]="['/event', item.eventId]">Book</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true"
+  [ngClass]="{'show': showModel}" [ngStyle]="{'display': showModel? 'block' : 'none'}">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header custom-modal-header">
+        <h5 class="modal-title font-weight-bold" id="userModalLabel">Book Events</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" [(ngModel)]="members.Name" name="Name" id="name"
+                placeholder="Enter name">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="contact">Contact</label>
+              <input type="text" class="form-control" [(ngModel)]="members.ContactNo" name="ContactNo" id="contact"
+                placeholder="Enter contact number">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="identityCardType">Identity Card Type</label>
+              <select class="form-control" id="identityCardType" [(ngModel)]="members.IdentityCard" name="IdentityCard">
+                <option value="aadhaar">Aadhaar</option>
+                <option value="pan">PAN</option>
+                <option value="passport">Passport</option>
+                <option value="driverLicense">Driver's License</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="identityCardNumber">Identity Card Number</label>
+              <input type="text" class="form-control" [(ngModel)]="members.CardNo" name="CardNo" id="identityCardNumber"
+                placeholder="Enter identity card number">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="age">Age</label>
+              <input type="number" class="form-control" [(ngModel)]="members.Age" name="IdentityCard" id="Age"
+                placeholder="Enter age">
+            </div>
+          </div>
+          <button type="button" class="btn btn-info mx-3" (click)="addBooking()">Add</button>
+          <button type="submit" class="btn btn-primary" (click)="onBook()">Book</button>
+        </form>
+      </div>
+      <div class="modal-footer mt-3">
+        <div class="table-responsive w-100">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Identity Card Type</th>
+                <th>Identity Card Number</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Example user data rows -->
+              <tr *ngFor="let user of bookingObj.EventBookingMembers">
+                <td>{{ user.Name }}</td>
+                <td>{{ user.ContactNo }}</td>
+                <td>{{ user.IdentityCard }}</td>
+                <td>{{ user.CardNo}}</td>
+                <td>{{ user.Age }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
