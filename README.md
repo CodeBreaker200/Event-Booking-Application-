@@ -39,3 +39,41 @@ Get **Event Spark** up and running by following these steps:
 
    ```bash
    git clone https://github.com/yourusername/event-spark.git
+
+
+💻 **Usage**
+Once the application is running, you can:
+Register as a new user.
+Log in with your credentials.
+Browse events tailored to your city.
+Book your desired events with ease.
+
+
+🗂️ Folder Structure
+event-spark/
+│
+├── src/
+│   ├── app/
+│   │   ├── components/    # Reusable components
+│   │   ├── services/      # Services for API calls and business logic
+│   │   ├── models/        # Interfaces and models
+│   │   └── ...            # Other Angular-specific files
+│   ├── assets/            # Static assets (images, icons, etc.)
+│   ├── environments/      # Environment configurations
+│   └── index.html         # Main HTML file
+│
+├── angular.json           # Angular configuration
+├── package.json           # NPM dependencies and scripts
+└── README.md              # Project documentation
+
+🤝 Contributing
+Contributions are welcome! If you’d like to contribute to Event Spark, please follow these steps:
+
+Fork the repository.
+Create a new branch for your feature or bug fix.
+Commit your changes and push the branch.
+Open a pull request with a detailed description of your changes.
+
+📜 License
+This project is licensed under the MIT License. Feel free to use and modify the code, but please attribute the original creators.
+
